@@ -3,13 +3,13 @@ def ft_tqdm(lst: range) -> None:
     like the original iterable, but prints a dynamically updating
     progress bar every time a value is requested."""
     total = len(lst)
-    width = 50  
+    width = 99
 
     for elem in lst:
         percent = (elem + 1) / total
         filled = int(width * percent)
-        bar = "=" * filled + "-" * (width - filled)
+        bar = "█" * filled + " " * (width - filled)
 
-        print(f"\r[{bar}] {percent:.0%}", end="", flush=True)
+        print(f"\r{percent:.0%}|{bar}| {elem + 1}/{total}", end="", flush=True)
 
         yield elem

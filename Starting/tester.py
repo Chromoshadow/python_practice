@@ -35,16 +35,22 @@
 
 # -----------------------------------------------------------------
 
-from time import sleep
-from tqdm import tqdm
-from Loading import ft_tqdm
+# from time import sleep
+# from tqdm import tqdm
+# from Loading import ft_tqdm
 
-for elem in ft_tqdm(range(333)):
-    sleep(0.005)
-print()
-for elem in tqdm(range(333)):
-    sleep(0.005)
-print()
+# for elem in ft_tqdm(range(333)):
+#     sleep(0.005)
+# print()
+# for elem in tqdm(range(333)):
+#     sleep(0.005)
+# print()
 
+# -------------------------------------------------------------------
 
+from ft_package import count_in_list
 
+print(count_in_list.__doc__)
+
+print(count_in_list(["toto", "tata", "toto"], "toto")) # output: 2
+print(count_in_list(["toto", "tata", "toto"], "tutu")) # output: 0
